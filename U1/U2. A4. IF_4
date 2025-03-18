@@ -1,0 +1,89 @@
+El programador sigue teniendo complicaciones para ajustar su código cuando ingresan valores, pero necesita ayuda, ahora su jefe, que no conoce mucho de programación, quiere un programa para calcular los rendimientos de 4 vendedores y ver la diferencia entre estos.
+
+El programa debe recibir los 4 valores de los vendedores, que se calcula en ventas por mes, después, el programa debe ordenarlos de menor a mayor, siendo 4 el mayor y 1 el menor, una vez hecho esto debe hacer las siguientes operaciones.
+
+Mostrar los números ordenados
+El resultado del 4 menos el 1
+El resultado del 2 menos el 1
+El resultado del 4 menos el 3
+El resultado del 3 menos el 2
+La suma de todas las ventas y el promedio general
+
+Algoritmo indu
+
+		
+		Escribir "Ingrese las ventas del vendedor 1"
+		Leer seller1
+		
+		Escribir "Ingrese las ventas del vendedor 2"
+		Leer seller2
+		
+		Escribir "Ingrese las ventas del vendedor 3"
+		Leer seller3
+		
+		Escribir "Ingrese las ventas del vendedor 4"
+		Leer seller4
+		
+		Si seller1 > seller2 y seller1 > seller3 y seller1 > seller4 Entonces
+			top = seller1
+		Sino
+			Si seller2 > seller1 y seller2 > seller3 y seller2 > seller4 Entonces
+				top = seller2
+			Sino
+				Si seller3 > seller1 y seller3 > seller2 y seller3 > seller4 Entonces
+					top = seller3
+				Sino
+					top = seller4
+				FinSi
+			FinSi
+		FinSi
+		
+		
+		Si seller1 < seller2 y seller1 < seller3 y seller1 < seller4 Entonces
+			low = seller1
+		Sino
+			Si seller2 < seller1 y seller2 < seller3 y seller2 < seller4 Entonces
+				low = seller2
+			Sino
+				Si seller3 < seller1 y seller3 < seller2 y seller3 < seller4 Entonces
+					low = seller3
+				Sino
+					low = seller4
+				FinSi
+			FinSi
+		FinSi
+		
+		Si seller1 > low y seller1 < top Entonces
+			mid = seller1
+		Sino
+			Si seller2 > low y seller2 < top Entonces
+				mid = seller2
+			Sino
+				Si seller3 > low y seller3 < top Entonces
+					mid = seller3
+				Sino
+					mid = seller4
+				FinSi
+			FinSi
+		FinSi
+		
+		// Escribir resultados
+		Escribir "Vendedor con más ventas: ", top
+		Escribir "Vendedor con ventas medianas: ", mid
+		Escribir "Vendedor con menos ventas: ", low
+		
+FinAlgoritmo
+
+*** Ejecución Iniciada. ***
+Ingrese las ventas del vendedor 1
+> 5
+Ingrese las ventas del vendedor 2
+> 4
+Ingrese las ventas del vendedor 3
+> 7
+Ingrese las ventas del vendedor 4
+> 8
+Vendedor con más ventas: 8
+Vendedor con ventas medianas: 5
+Vendedor con menos ventas: 4
+*** Ejecución Finalizada. ***
