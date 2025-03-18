@@ -1,0 +1,82 @@
+Una zapatera necesita registrar los datos de sus vendedores y los datos de las ventas individuales para calcular algunos estándares de calidad a fin de mejorar la productividad y otorgar bonos, así como "cortar cabezas". 
+
+El sistema debe solicitar el a cuántos vendedores se va a registrar su información y de cada vendedor debe solicitar cuántas ventas realizó y de cuánto fue el valor de cada una. 
+
+Después de terminar el registro de las ventas, debe mostrar el total de las ventas de ese vendedor, el número de ventas que hizo y su venta más alta. Si la venta más alta es menor a $100 o el total es menor de $1,500, debe mostrar un mensaje de que pase a Recursos Humanos. 
+
+El reporte final debe entregar un reporte de cuántos vendedores se registraron en el sistema y cuánto fue el total de las ventas globales de la empresa . Si el reporte global es mayor a $20,000 deberá mostrar un mensaje de que se alcanzó la meta , de lo contrario mostrará un mensaje que habrá que convocar una reunión . 
+
+Definir num_vende, m_ven, i, j, total_ventas, venta_max, ventas_glo Como Real
+    ventas_glo = 0
+	
+	Escribir " Ingresa cantidad de vendedores"
+	Leer num_vende
+	
+	Para i = 1 Hasta num_vende
+		total_ventas = 0
+		venta_max = 0
+		Escribir "¿Cuantas ventas se realizaron?"
+		Leer m_ven
+		
+		Para j = 1 Hasta m_ven
+			Escribir "Ingresa el valor de las ventas: "
+			Leer v_ven
+			
+			si v_ven > venta_max Entonces
+				venta_max = v_ven
+			FinSi
+			
+			ventass = ventass + v_ven
+		FinPara
+		
+		Mostrar "Resumen del vendedor ", i
+		Mostrar "Hizo", (j - 1), "Ventas"
+		Mostrar "Resultado $ ",ventass
+		
+		si venta_max < 100 o ventass < 1500 Entonces
+			Escribir "Pase a RH"
+		FinSi
+		totalemcom = totalemcom + ventass
+		ventass = 0
+	FinPara
+	
+	Escribir "Reporte de ventas"
+	Escribir "Numero total de vendedores: ", num_vende
+	Escribir "Total de ventas : ", totalemcom
+	
+	si totalemcom > 20000 Entonces
+		Escribir "Alcanzaste la meta"
+	SiNo
+		Escribir "Convoco una reunion"
+	FinSi
+FinAlgoritmo
+
+*** Ejecución Iniciada. ***
+ Ingresa cantidad de vendedores
+> 2
+¿Cuantas ventas se realizaron?
+> 2
+Ingresa el valor de las ventas:
+> 100
+Ingresa el valor de las ventas:
+> 100
+Resumen del vendedor 1
+Hizo2Ventas
+Resultado $ 200
+Pase a RH
+
+¿Cuantas ventas se realizaron?
+> 2
+Ingresa el valor de las ventas:
+> 20
+Ingresa el valor de las ventas:
+> 20
+Resumen del vendedor 2
+Hizo2Ventas
+Resultado $ 40
+Pase a RH
+Reporte de ventas
+Numero total de vendedores: 2
+Total de ventas : 240
+Convoco una reunion
+*** Ejecución Finalizada. ***
