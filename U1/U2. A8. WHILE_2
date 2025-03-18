@@ -1,0 +1,77 @@
+La abarrotera "Kamarena" necesita trabajar en un sistema que le ayude a registrar de manera fácil y rápida todos sus pedidos, hubo una explosión en el mercado al otro lado de la ciudad y ellos han quedado como el único lugar disponible para comprar, esa idea de poner una bomba ha salido terriblemente bien (no hubo ningún herido).
+
+Mientras el dueño sigue luchando entre entregarse a las autoridades por lo sucedido y pedir perdón a las familias involucradas, ha pedido a su asesor externo, el "Teclas" que le ayude con un sistema.
+
+Para ingresar al sistema debe pedir una contraseña (Mientras), que debe ser una fecha de nacimiento en formato YYYY-MM-DD, una vez en el sistema, debe preguntar si (Si) quiere hacer registros de zanahorias o de tomates.
+
+Si elige zanahorias, deberá pedir que se ingresen cuántas cajas deberá ingresar (Para), como cada caja tiene un valor diferente, habrá que ingresarlo manualmente una por una.
+
+Si elige tomates, deberá ingresar cuantas cajas se necesiten y cuando escriba el número 100001 deberá terminar de registrar (Mientras).
+
+En ambos casos, deberá qué opción se eligió y mostrar cuántas cajas se añadieron, cuánto fue el total del peso y cuánto fue el costo total de esa venta, las zanahorias cuestan $15.84 el kilo y los tomates cuestan $11.34 el kilo, si (Si) la venta supera los $10,000, se le hará un descuento automático del 7.5% del valor total.
+
+Finalmente, deberá preguntar si (Si) el cliente necesita o no envío, si requiere envío deberá añadir $150 más a su pedido, de lo contrario, mostrará el precio anterior.
+
+Algoritmo Aborrotes
+	Escribir "Ingresa la contraseña (YYY-MM-DD): "
+	Leer fecha_na
+	Escribir "Registro (zanahoria o tomates): "
+	Leer tipo_pro
+	
+		Si tipo_pro = "Zanahoria" Entonces
+			Escribir "¿Cuantas cajas de zanahorias necesita "
+			Leer cant_cajas
+			costo_tt = 0
+			para i = 1 Hasta cant_cajas 
+				Escribir "Ingresa el peso (KG) de la caja ", i, ":"
+				Leer PesoCajas
+				costo_tt = costo_tt + (PesoCajas * 15.84)
+			FinPara
+			Escribir "Total de cajas de Zanahoria: ", cant_cajas
+			Escribir "Costo total: $", costo_tt
+			
+		SiNo si tipo_pro = "Tomates" Entonces
+				costo_tt = 0
+				cant_cajas = 0
+				Mientras Verdadero
+					Escribir "Ingresa el peso (KG) de las cajas de tomates (ingresa 100001 para terminar) :"
+					Leer PesoCajas
+					si PesoCajas = 100001 Entonces
+					FinSi
+					cant_cajas = cant_cajas + 1
+					costo_tt = costo_tt + (PesoCajas * 11.34)
+				FinMientras
+				Escribir "Total de cajas de Tomates: ", cant_cajas
+				Escribir "Costo total: $ ", costo_tt
+			SiNo
+				Escribir "Opcion no valida"
+			
+			Fin Si
+			si costo_tt > 10000 Entonces
+				descuento = costo_tt * 0.075
+				costo_tt = costo_tt - descuento
+				Escribir "Descuento del 7.5% aplicado: $ ",descuento
+			FinSi
+			Escribir "¿El cliente requiere envio?: "
+			Leer res
+			si res = "Si " Entonces
+				costo_tt = costo_tt + 150
+				Escribir "Costo total con envio: $", costo_tt
+			SiNo
+				Escribir "Costo total sin envio: $", costo_tt
+			FinSi
+		FinSi
+		
+		
+FinAlgoritmo
+
+*** Ejecución Iniciada. ***
+Ingresa la contraseña (YYY-MM-DD):
+> 2025-09-12
+Registro (zanahoria o tomates):
+> zanahorias
+Opcion no valida
+¿El cliente requiere envio?:
+> si
+Costo total sin envio: $0
+*** Ejecución Finalizada. ***
