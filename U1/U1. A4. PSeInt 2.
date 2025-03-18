@@ -1,8 +1,8 @@
-Realiza un pseudocódigo que calcule el promedio de un alumno, el usuario ingresará su nombre y edad, después deberá ingresar sus 3 instrumentos, examen que vale el 30%, tareas que vale el 20% y trabajos en clase que vale el 50%, deberá calcular el promedio final.
+Realiza un programa para calcular el área sombreada roja de la siguiente figura, ingresando solo el radio del círculo y la hipotenusa del triángulo. Considera el valor de π como 3.1416.
 
-Usando operadores, deberá validar si el alumno aprobó con una calificación igual o mayor a 6.
-
-La respuesta debe mostrar el nombre del alumno, su edad, y el valor de cada instrumento, su promedio final, y mostrar si el alumno aprobó con un Verdadero o Falso.
+El resultado se debe mostrar en m2.
+ 
+Ejemplo de resultado, sí R= 5 y H = 10, Área=53.13
 
 
 Algoritmo Actividad1_calculo
@@ -20,25 +20,12 @@ Algoritmo Actividad1_calculo
 	area_c2 <- (p * (ra_c2 * ra_c2)) / 2
 	area_tatal <- area_circulo + area_tri - area_c2
 	ESCRIBIR "El area es ", area_tatal
-	
 FinAlgoritmo
 
 *** Ejecución Iniciada. ***
-ingresa el nombre
-> Maria
-edad
-> 17
-ingresa la calificacion de exame
+ingrese el radio del circulo
+> 5
+ingresee la hipotenusa
 > 10
-ingresa la calificacion total de tareas
-> 10
-ingresa la calificacion total de sus trabajos en clases
-> 1
-Nombre: Maria
-Edad: 17
-calificacion exaen: 10
-Calificaciones total de tareas:10
-calificacion total de trabajos en clases:1
-Promedio:5.5
-¿el alumno aprobo?FALSO
+El area es 53.1187701892
 *** Ejecución Finalizada. ***
