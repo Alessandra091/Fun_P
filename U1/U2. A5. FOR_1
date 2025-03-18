@@ -1,0 +1,46 @@
+An elementary school needs a system to calculate grades, but depending on the grade, the subjects vary and that generates a more complex job to be able to calculate the average of each student correctly.
+
+The director wants the teachers to be able to enter the name of the student they are going to evaluate, then how many subjects they are going to grade, then, enter each grade. If the result is greater than 6, it should show a message that he/she passed, if it is less, it should show a message that he/she needs to be retaken and if the grade is equal to 10, it should show a message that he/she is an outstanding student.
+
+At the end, the program should show a report with the name of the student, his/her final average and the message that will depend on his/her grade. For delivery, attach the code in a text file (. txt)
+
+
+Algoritmo sin_titulo
+	Escribir "El nombre del alumno"
+	Leer alumno
+	Escribir "Materias a calificar"
+	Leer macali
+    Para i <- 1 Hasta macali Hacer
+        Escribir "ingresa calificacion ", i, ": "
+        Leer cali
+		sumar = sumar + cali
+	FinPara
+	
+	promedio = sumar / macali
+	
+	si promedio > 6 Entonces
+		mj = "La calificacion es aprobatorio"
+	SiNo
+		mj= "La calificacion es reprobatorio "
+	FinSi
+	si promedio = 10 Entonces
+		mj= "Es alumno destacado"
+	FinSi
+	Escribir "El alumno", alumno, "Tiene promedio de: ", promedio," ", mj
+FinAlgoritmo
+
+*** Ejecución Iniciada. ***
+El nombre del alumno
+> meli
+Materias a calificar
+> 4
+ingresa calificacion 1:
+> 10
+ingresa calificacion 2:
+> 10
+ingresa calificacion 3:
+> 10
+ingresa calificacion 4:
+> 10
+El alumnomeliTiene promedio de: 10 Es alumno destacado
+*** Ejecución Finalizada. ***
