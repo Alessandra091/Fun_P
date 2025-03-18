@@ -1,0 +1,18 @@
+Algoritmo Actividad1_calculo
+	Escribir "ingrese el radio del circulo"
+	Leer r
+	Escribir "ingresee la hipotenusa"
+	Leer h
+	
+	//procesos
+	P <- 3.1416
+	area_circulo <- p * (r * r) / 4
+	altura <- (h * h ) - ( r * r)
+	altura <- RAIZ(altura)
+	area_tri <- ((r * 2) * altura) / 2
+	ra_c2 <- r / 2
+	area_c2 <- (p * (ra_c2 * ra_c2)) / 2
+	area_tatal <- area_circulo + area_tri - area_c2
+	ESCRIBIR "El area es ", area_tatal
+	
+FinAlgoritmo
