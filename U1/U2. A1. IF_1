@@ -39,3 +39,9 @@ Algoritmo sin_titulo
 		FinSi
 	FinSi
 FinAlgoritmo
+
+*** Ejecución Iniciada. ***
+Ingresar el Valor en Bytes:
+> 1024
+1KB
+*** Ejecución Finalizada. ***
