@@ -1,0 +1,47 @@
+Algoritmo l
+	definir opcion, continuar como cadena
+		Definir lad, r, al, area, v Como Real
+		
+		conti <- "S"
+		Mientras conti = "S"
+			Escribir "Elija una figura geométrica para calcular:"
+			Escribir "1. Cubo"
+			Escribir "2. Esfera"
+			Escribir "3. Cilindro"
+			Leer opcion
+			
+		Si opcion = "1" Entonces
+            Escribir "Ingrese el lado del cubo:"
+            Leer lad
+            area <- 6 * (lad ^ 2)
+            v <- lad ^ 3
+            Escribir "Área del cubo: ", area
+            Escribir "Volumen del cubo: ", v
+			Escribir "Ingrese el radio de la esfera:"
+		SiNo
+			Si opcion = "2" Entonces
+				Leer r
+				area <- 4 * PI * (r ^ 2)
+				v <- (4 / 3) * PI * (r^ 3)
+				Escribir "Área de la esfera: ", area
+				Escribir "Volumen de la esfera: ", v
+				
+			Sino Si opcion = "3" Entonces
+					Escribir "Ingrese el radio de la base del cilindro:"
+					Leer r
+					Escribir "Ingrese la altura del cilindro:"
+					Leer al
+					area <- 2 * PI * r * (r + al)
+					v <- PI * (r ^ 2) * al
+					Escribir "Área del cilindro: ", area
+					Escribir "Volumen del cilindro: ", v
+				SiNo
+					Escribir "Opción inválida."
+				
+				FinSi
+			FinSi
+			
+		FinSi
+		Escribir "¿Desea realizar otro calculo?"
+		Leer conti
+	FinMientras
