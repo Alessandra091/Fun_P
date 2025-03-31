@@ -22,4 +22,4 @@
 
 - **UNIDAD 3**
   ###### Es esta unidad se aprendieron conceptos como Subprogrmas y el uso de GitHUb.
-Ir a la unidad 3[https://github.com/Alessandra091/Fun_P/tree/main/U3](https://github.com/Alessandra091/Fun_P/tree/main/U3)
+[Ir a la unidad 3](Ir a la unidad 3[https://github.com/Alessandra091/Fun_P/tree/main/U3](https://github.com/Alessandra091/Fun_P/tree/main/U3)
